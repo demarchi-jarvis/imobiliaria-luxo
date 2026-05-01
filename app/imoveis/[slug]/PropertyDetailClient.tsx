@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowLeft, Bed, Bath, Car, Square, Maximize, MapPin,
   Phone, MessageCircle, Share2, Heart, CheckCircle2,
-  Heater, Waves, Dumbbell, Wind, PawPrint, Building2
+  Plane, Waves, Dumbbell, Wind, PawPrint, Building2
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -21,7 +21,7 @@ import { cn, formatPrice, buildPropertyWhatsAppLink } from "@/lib/utils";
 const AMENITY_ICONS: Record<string, React.ReactNode> = {
   hasPool:      <Waves     size={16} strokeWidth={1.0} />,
   hasGym:       <Dumbbell  size={16} strokeWidth={1.0} />,
-  hasHelipad:   <Heater    size={16} strokeWidth={1.0} />,
+  hasHelipad:   <Plane     size={16} strokeWidth={1.0} />,
   hasSauna:     <Wind      size={16} strokeWidth={1.0} />,
   hasConcierge: <Building2 size={16} strokeWidth={1.0} />,
   petFriendly:  <PawPrint  size={16} strokeWidth={1.0} />,

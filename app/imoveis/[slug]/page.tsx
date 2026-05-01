@@ -6,6 +6,8 @@ import { formatPrice } from "@/lib/utils";
 
 // ─── Static generation ────────────────────────────────────────────────────────
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const slugs = await getAllPropertySlugs();
   return slugs.map((slug) => ({ slug }));
@@ -17,7 +19,7 @@ export async function generateMetadata(
   { params }: { params: { slug: string } }
 ): Promise<Metadata> {
   const property = await getPropertyBySlug(params.slug);
-  if (!property) return { title: "Imóvel não encontrado" };
+  if (!property) return { title: "Imóvel não encontrado | Imobiliária Luxo RJ" };
 
   const title       = `${property.title} | ${property.address.neighborhood}, ${property.address.city}`;
   const description = `${property.specs.bedrooms} dormitórios · ${property.specs.usableArea}m² úteis · ${formatPrice(property.price)}. ${property.description.slice(0, 120)}`;

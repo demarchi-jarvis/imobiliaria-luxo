@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Navigation } from "lucide-react";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 interface PropertyMapProps {
   lat: number;

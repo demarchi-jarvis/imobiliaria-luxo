@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Bed, Bath, Car, Square, Heart, ExternalLink, Heater } from "lucide-react";
+import { Bed, Bath, Car, Square, Heart, ExternalLink, Plane } from "lucide-react";
 import { cn, formatPrice } from "@/lib/utils";
 import type { Property } from "@/types/property";
 
@@ -93,7 +93,7 @@ export default function PropertyCard({ property, size = "default", index = 0 }: 
             </span>
             {property.specs.hasHelipad && (
               <span className="flex items-center gap-1.5 font-sans text-xs tracking-wide">
-                <Heater size={13} strokeWidth={1.25} className="text-gold-400" />
+                <Plane size={13} strokeWidth={1.25} className="text-gold-400" />
                 Heliponto
               </span>
             )}
